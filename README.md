@@ -16,7 +16,7 @@
 </p>
 
 <p align="center">
-  <img src="assets/teaser.png" alt="TAPFormer teaser omage" width="100%"/>
+  <img src="assets/teaser.png" alt="TAPFormer teaser omage" width="70%"/>
 </p>
 
 ### Key Features
