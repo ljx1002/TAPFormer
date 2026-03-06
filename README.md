@@ -104,7 +104,7 @@ Note: If you encounter issues with `flow-vis`, it's only needed for optical flow
 ### 1. Test Sequences and Pretrained Weights
 We build the first benchmark for multimodal arbitrary point tracking, including a synthetic frame–event training set and manually annotated real-world [test sequences](https://drive.google.com/file/d/1gvbQgS8tbVSaOtgAIryYcbDabzsDoUaE/view?usp=drive_link), providing a comprehensive platform for future research. We also evaluate our model on the feature point tracking benchmarks [EDS](https://download.ifi.uzh.ch/rpg/CVPR23_deep_ev_tracker/eds_subseq.zip) and [EC](https://download.ifi.uzh.ch/rpg/CVPR23_deep_ev_tracker/ec_subseq.zip). The updated EDS datasets ground truth annotations can be downloaded [here](https://drive.google.com/file/d/1w7uQm8AK1HVtNOnBg-wxoDw3QUPn8OVs/view?usp=drive_link).
 
-Furthermore, we also provide the [network weights]() trained on the FE-FastKub dataset
+Furthermore, we also provide the [network weights](https://drive.google.com/file/d/1vklq9pCnRBMeevhGfmmHd4i8KveZM9sT/view?usp=drive_link) trained on the FE-FastKub dataset
 
 
 ### 2. Prepare Your Data
