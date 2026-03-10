@@ -5,6 +5,7 @@
   <a href="https://arxiv.org/pdf/2603.04989"><img src="https://img.shields.io/badge/arXiv-TAPFormer-b31b1b" alt="arXiv"></a>
   <a href="https://tapformer.github.io/"><img src="https://img.shields.io/badge/🌐-Project_Page-orange" alt="Project Page"></a>
   <a href="https://drive.google.com/file/d/1gvbQgS8tbVSaOtgAIryYcbDabzsDoUaE/view?usp=drive_link"><img src="https://img.shields.io/badge/📦-Dataset-blue" alt="Dataset"></a>
+  <a href="https://huggingface.co/papers/2603.04989"><img src="https://img.shields.io/badge/🤗-Demo-yellow" alt="Hugging Face Page"></a>
 </p>
 
 <p align="center">
