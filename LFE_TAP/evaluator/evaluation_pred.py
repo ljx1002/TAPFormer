@@ -34,10 +34,12 @@ class EvaluationPredictor(torch.nn.Module):
         self.if_test = if_test
         self.model.eval()
     
-    def forward(self, video, events, queries, img_ifnew=None):
+    def forward(self, video, events, queries=None, img_ifnew=None):
+        B, T, C_r, H, W = video.shape
+        C_e = events[0].shape[1]
         if queries is None and self.grid_size > 0:
             grid_pts = get_points_on_a_grid(
-                self.grid_size, self.interp_shape, device="cuda"
+                self.grid_size, (H, W), device="cuda"
             )
             queries = torch.cat(
                 [torch.ones_like(grid_pts[:, :, :1]) * 0, grid_pts],
@@ -46,8 +48,6 @@ class EvaluationPredictor(torch.nn.Module):
             self.grid_size = 0
             
         queries = queries.clone()
-        B, T, C_r, H, W = video.shape
-        C_e = events[0].shape[1]
         B, N, D = queries.shape
         device = queries.device
         
@@ -80,7 +80,7 @@ class EvaluationPredictor(torch.nn.Module):
                 conf_e[:, :, pind:pind+1] = conf_e_pind[:, :, :1]
         else:
             if self.grid_size > 0:
-                xy = get_points_on_a_grid(self.grid_size, video.shape[3:])
+                xy = get_points_on_a_grid(self.grid_size, interp_shape)
                 xy = torch.cat([torch.zeros_like(xy[:, :, :1]), xy], dim=2).to(device)  
                 queries = torch.cat([queries, xy], dim=1)  
                 
@@ -88,7 +88,7 @@ class EvaluationPredictor(torch.nn.Module):
                 xy = get_uniformly_sampled_pts(
                     self.num_uniformly_sampled_pts,
                     video.shape[1],
-                    video.shape[3:],
+                    interp_shape,
                     device=device,
                 )
                 queries = torch.cat([queries, xy], dim=1)  
@@ -106,7 +106,8 @@ class EvaluationPredictor(torch.nn.Module):
                 
             conf_e = preds[2]
             if (
-                sift_size > 0
+                queries is not None
+                and sift_size > 0
                 or self.grid_size > 0
                 or self.num_uniformly_sampled_pts > 0
             ):
