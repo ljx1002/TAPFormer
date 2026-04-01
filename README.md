@@ -1,7 +1,7 @@
 # TAPFormer: Robust Arbitrary Point Tracking via Transient Asynchronous Fusion of Frames and Events (CVPR 2026)
 
 <p align="center">
-  <a href="https://arxiv.org/abs/2602.04877"><img src="https://img.shields.io/badge/arXiv-FETAP-b31b1b" alt="arXiv"></a>
+  <a href="https://arxiv.org/abs/2409.11953"><img src="https://img.shields.io/badge/arXiv-FETAP-b31b1b" alt="arXiv"></a>
   <a href="https://arxiv.org/pdf/2603.04989"><img src="https://img.shields.io/badge/arXiv-TAPFormer-b31b1b" alt="arXiv"></a>
   <a href="https://tapformer.github.io/"><img src="https://img.shields.io/badge/🌐-Project_Page-orange" alt="Project Page"></a>
   <a href="https://drive.google.com/file/d/1gvbQgS8tbVSaOtgAIryYcbDabzsDoUaE/view?usp=drive_link"><img src="https://img.shields.io/badge/📦-Dataset-blue" alt="Dataset"></a>
