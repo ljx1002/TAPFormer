@@ -9,7 +9,6 @@ eval_datasets:
   # InivTAP
   - ["ID_Fast_Fruit", "InivTAP"]
   - ["ID_Dark_Fruit", "InivTAP"]
-  - ["ID_Fast_Hand", "InivTAP"]
   - ["ID_OverExp_Fruit", "InivTAP"]
   - ["ID_OverExp_Fruit2", "InivTAP"]
   - ["ID_Dynamic_Robot", "InivTAP"]
